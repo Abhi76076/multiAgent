@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTI-AGENT SIMULATION // SYSTEM DASHBOARD</title>
+    <!-- Prevent 404 favicon requests -->
+    <link rel="icon" href="data:,">
+    <!-- Sci-fi Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="background-grid"></div>
+    <div class="overlay"></div>
+
+    <main class="dashboard">
+        <header class="sys-header">
+            <div class="sys-title">
+                <h1>SYS.OP // NEURAL LINK DEBATE</h1>
+                <p>OVERSEER PROTOCOL: GEMINI-ENABLED MULTI-AGENT SYNC</p>
+            </div>
+            <div class="sys-status">
+                <span class="status-indicator"></span>
+                <span class="status-text" id="connection-status">STANDBY</span>
+            </div>
+        </header>
+
+        <section class="control-panel panel">
+            <div class="panel-header">INITIALIZATION PROTOCOL</div>
+            <div class="panel-body">
+                <div class="input-group">
+                    <label for="topic-input">INPUT DISCUSSION TOPIC</label>
+                    <input type="text" id="topic-input" placeholder="e.g., The impact of AGI on the global economy" />
+                </div>
+                <button id="start-btn" class="cyber-button"><span>INITIALIZE SIMULATION</span></button>
+            </div>
+        </section>
+
+        <section class="agent-hud">
+            <div class="agent-card" id="card-alpha">
+                <h3>AGENT: ALPHA</h3>
+                <p>ROLE: SYNTHETIC PROPONENT</p>
+                <div class="agent-activity" id="activity-alpha">IDLE</div>
+            </div>
+            <div class="agent-card" id="card-moderator">
+                <h3>MODERATOR</h3>
+                <p>ROLE: SYSTEM OVERSEER</p>
+                <div class="agent-activity" id="activity-moderator">IDLE</div>
+            </div>
+            <div class="agent-card" id="card-beta">
+                <h3>AGENT: BETA</h3>
+                <p>ROLE: REALIST SKEPTIC</p>
+                <div class="agent-activity" id="activity-beta">IDLE</div>
+            </div>
+        </section>
+
+        <section class="simulation-feed panel">
+            <div class="panel-header">NEURAL FEED OUTSTREAM</div>
+            <div class="feed-container" id="feed-container">
+                <!-- Feed logs will be appended here -->
+                <div class="feed-message system">
+                    <div class="msg-content">SYS> Awaiting simulation initialization...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
