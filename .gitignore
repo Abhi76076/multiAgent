@@ -43,3 +43,5 @@ share/python-wheels/
 ehthumbs.db
 Thumbs.db
 
+scratch.pyc
+.ipynb_checkpoints
