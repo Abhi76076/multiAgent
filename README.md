@@ -7,12 +7,12 @@ A real-time, highly sci-fi themed web dashboard that orchestrates formal debates
 - **Multi-Agent Debates**: Automatically manages a Moderator, a Proponent (Agent Alpha), and a Skeptic (Agent Beta) through conversational rounds.
 - **Sci-Fi Hologram HUD**: Modern CSS grid with deep dark space coloring (`#0a0f1a`), highly styled glassmorphism, glowing magenta/cyan borders, and typewriter chat effects.
 - **Real-time WebSockets**: Prevents browser timeouts by streaming events independently over full-duplex WebSockets instead of blocking HTTP requests.
-- **Resilient AI Fallback Mechanism**: Rather than permanently hanging when Gemini is busy, the backend gracefully catches timeouts over 10 seconds and cascades the request down a list of free fallback models (e.g., `gemini-2.5-flash`, `gemini-2.0-flash`).
+- **Resilient AI Fallback Mechanism**: Rather than permanently hanging when an API is busy, the backend gracefully catches timeouts over 10 seconds and cascades the request down a list of free fallback models (e.g., `gemini-2.5-flash`, `gemini-2.0-flash`, `llama3-8b-8192`, `llama-3.3-70b-versatile`).
 
 ## Technology Stack
 
 - **Backend**: FastAPI, WebSockets (`uvicorn`)
-- **AI Integration**: `google-genai` Python SDK
+- **AI Integration**: `google-genai` and `groq` Python SDKs
 - **Frontend**: Vanilla HTML5, CSS3 Variables, JavaScript (ES6)
 - **Typography**: Google Fonts (Orbitron and Rajdhani)
 
@@ -31,7 +31,7 @@ A real-time, highly sci-fi themed web dashboard that orchestrates formal debates
    ```bash
    cp .env.example .env
    ```
-   Add your `GEMINI_API_KEY` to `.env`.
+   Add your `GEMINI_API_KEY` and optionally `GROQ_API_KEY` (for Groq fallbacks) to `.env`.
 
 ## Running the Dashboard
 
