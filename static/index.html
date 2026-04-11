@@ -9,63 +9,93 @@
     <!-- Sci-fi Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <div class="background-grid"></div>
-    <div class="overlay"></div>
+    <div class="dynamic-background">
+        <div class="gradient-sphere sphere-1"></div>
+        <div class="gradient-sphere sphere-2"></div>
+        <div class="gradient-sphere sphere-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
 
     <main class="dashboard">
-        <header class="sys-header">
+        <header class="sys-header glass-panel">
             <div class="sys-title">
-                <h1>SYS.OP // NEURAL LINK DEBATE</h1>
+                <h1>SYS.OP <span class="highlight">//</span> NEURAL LINK</h1>
                 <p>OVERSEER PROTOCOL: GEMINI-ENABLED MULTI-AGENT SYNC</p>
             </div>
-            <div class="sys-status">
+            <div class="sys-status glass-panel-inner">
                 <span class="status-indicator"></span>
                 <span class="status-text" id="connection-status">STANDBY</span>
             </div>
         </header>
 
-        <section class="control-panel panel">
-            <div class="panel-header">INITIALIZATION PROTOCOL</div>
-            <div class="panel-body">
-                <div class="input-group">
-                    <label for="topic-input">INPUT DISCUSSION TOPIC</label>
-                    <input type="text" id="topic-input" placeholder="e.g., The impact of AGI on the global economy" />
-                </div>
-                <button id="start-btn" class="cyber-button"><span>INITIALIZE SIMULATION</span></button>
-            </div>
-        </section>
+        <div class="dashboard-grid">
+            <div class="left-column">
+                <section class="control-panel glass-panel">
+                    <div class="panel-header">
+                        <span class="header-icon">⟡</span> INITIALIZATION PROTOCOL
+                    </div>
+                    <div class="panel-body">
+                        <div class="input-group">
+                            <label for="topic-input">INPUT DISCUSSION TOPIC</label>
+                            <input type="text" id="topic-input" placeholder="e.g., The impact of AGI on the global economy" />
+                        </div>
+                        <button id="start-btn" class="cyber-button">
+                            <span class="btn-content">INITIALIZE SIMULATION</span>
+                            <span class="btn-glitch"></span>
+                        </button>
+                    </div>
+                </section>
 
-        <section class="agent-hud">
-            <div class="agent-card" id="card-alpha">
-                <h3>AGENT: ALPHA</h3>
-                <p>ROLE: SYNTHETIC PROPONENT</p>
-                <div class="agent-activity" id="activity-alpha">IDLE</div>
+                <section class="agent-hud">
+                    <div class="agent-card glass-panel" id="card-alpha">
+                        <div class="card-glow"></div>
+                        <div class="agent-avatar avatar-alpha">A</div>
+                        <div class="agent-info">
+                            <h3>AGENT: ALPHA</h3>
+                            <p>SYNTHETIC PROPONENT</p>
+                            <div class="agent-activity" id="activity-alpha">IDLE</div>
+                        </div>
+                    </div>
+                    <div class="agent-card glass-panel" id="card-moderator">
+                        <div class="card-glow"></div>
+                        <div class="agent-avatar avatar-mod">M</div>
+                        <div class="agent-info">
+                            <h3>MODERATOR</h3>
+                            <p>SYSTEM OVERSEER</p>
+                            <div class="agent-activity" id="activity-moderator">IDLE</div>
+                        </div>
+                    </div>
+                    <div class="agent-card glass-panel" id="card-beta">
+                        <div class="card-glow"></div>
+                        <div class="agent-avatar avatar-beta">B</div>
+                        <div class="agent-info">
+                            <h3>AGENT: BETA</h3>
+                            <p>REALIST SKEPTIC</p>
+                            <div class="agent-activity" id="activity-beta">IDLE</div>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div class="agent-card" id="card-moderator">
-                <h3>MODERATOR</h3>
-                <p>ROLE: SYSTEM OVERSEER</p>
-                <div class="agent-activity" id="activity-moderator">IDLE</div>
-            </div>
-            <div class="agent-card" id="card-beta">
-                <h3>AGENT: BETA</h3>
-                <p>ROLE: REALIST SKEPTIC</p>
-                <div class="agent-activity" id="activity-beta">IDLE</div>
-            </div>
-        </section>
 
-        <section class="simulation-feed panel">
-            <div class="panel-header">NEURAL FEED OUTSTREAM</div>
-            <div class="feed-container" id="feed-container">
-                <!-- Feed logs will be appended here -->
-                <div class="feed-message system">
-                    <div class="msg-content">SYS> Awaiting simulation initialization...</div>
-                </div>
+            <div class="right-column">
+                <section class="simulation-feed glass-panel">
+                    <div class="panel-header">
+                        <span class="header-icon">⚡</span> NEURAL FEED OUTSTREAM
+                        <div class="header-decoration"></div>
+                    </div>
+                    <div class="feed-container" id="feed-container">
+                        <!-- Feed logs will be appended here -->
+                        <div class="feed-message system">
+                            <div class="msg-content">SYS> Awaiting simulation initialization...</div>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
+        </div>
     </main>
 
     <script src="/static/script.js"></script>
