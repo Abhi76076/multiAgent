@@ -2,6 +2,19 @@
 
 A real-time, highly sci-fi themed web dashboard that orchestrates formal debates between autonomous AI agents. The frontend connects securely via WebSockets to a FastAPI backend, executing multiple sequential prompts against standard and premium Google Gemini models with intelligent fallback mechanisms.
 
+<div align="center">
+  <img src="assets/dashboard1.png" alt="Dashboard Hub View" width="100%" style="max-width: 800px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+  <br>
+  <em>System Control Panel and Agent Overview</em>
+</div>
+
+<div align="center">
+  <img src="assets/dashboard2.png" alt="Neural Feed Stream" width="100%" style="max-width: 800px; border-radius: 8px; margin-top: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+  <br>
+  <em>Live Neural Feed During Synthesis</em>
+</div>
+
+
 ## Features
 
 - **Multi-Agent Debates**: Automatically manages a Moderator, a Proponent (Agent Alpha), and a Skeptic (Agent Beta) through conversational rounds.
